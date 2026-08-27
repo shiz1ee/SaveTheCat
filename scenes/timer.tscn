@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://chg7nv0f85bg6"]
+
+[ext_resource type="Script" uid="uid://drxx5ulnnpar0" path="res://scenes/timer.gd" id="1_srplv"]
+
+[node name="Node2D" type="Node2D" unique_id=1445101821]
+script = ExtResource("1_srplv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=387666531]
+offset_left = 250.0
+offset_top = 115.0
+offset_right = 290.0
+offset_bottom = 155.0
