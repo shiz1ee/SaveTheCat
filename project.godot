@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://cmucol5v28rti"
+EventController="*uid://50lpm5en0k1e"
+GameController="*uid://gpqwh4qpoi2k"
 
 [display]
 

@@ -1,8 +1,10 @@
 extends Area2D
 
-
+@export var value: int = 1
 
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print("+1 coin")
+	if body is Player:
+		GameController.coin_collected(value)
+		self.queue_free()

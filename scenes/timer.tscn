@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://drxx5ulnnpar0" path="res://scenes/timer.gd" id="1_srplv"]
 
-[node name="Node2D" type="Node2D" unique_id=1445101821]
+[node name="timer" type="Node2D" unique_id=1445101821]
 script = ExtResource("1_srplv")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=387666531]

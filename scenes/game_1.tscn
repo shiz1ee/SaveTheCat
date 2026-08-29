@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://88itlutnys1y"]
 
 [ext_resource type="PackedScene" uid="uid://x37ogllew5qs" path="res://scenes/player.tscn" id="1_pncae"]
+[ext_resource type="Script" uid="uid://b8vrbgd8hpjef" path="res://scenes/game_1.gd" id="1_ygnno"]
 [ext_resource type="Texture2D" uid="uid://x53rhiejfiad" path="res://assets/sheet.png" id="2_7gu72"]
 [ext_resource type="PackedScene" uid="uid://lfwymm3g4x8f" path="res://scenes/coin.tscn" id="3_7gu72"]
+[ext_resource type="PackedScene" uid="uid://cw801sae2w6f8" path="res://scenes/killzone.tscn" id="4_neyee"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_neyee"]
 texture = ExtResource("2_7gu72")
@@ -138,7 +140,10 @@ texture = ExtResource("2_7gu72")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_neyee")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cw3hl"]
+
 [node name="game_1" type="Node2D" unique_id=1235167146]
+script = ExtResource("1_ygnno")
 
 [node name="Player" parent="." unique_id=1382188466 instance=ExtResource("1_pncae")]
 position = Vector2(74, 63)
@@ -161,3 +166,12 @@ position = Vector2(327, 22)
 
 [node name="Area2D3" parent="." unique_id=1521978525 instance=ExtResource("3_7gu72")]
 position = Vector2(484, 68)
+
+[node name="Coin" parent="." unique_id=293840748 instance=ExtResource("3_7gu72")]
+position = Vector2(276, 71)
+
+[node name="killzone" parent="." unique_id=622642554 instance=ExtResource("4_neyee")]
+position = Vector2(106, 135)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=2039853346]
+shape = SubResource("WorldBoundaryShape2D_cw3hl")
