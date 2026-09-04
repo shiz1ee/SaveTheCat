@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bo1p8e7pa35gj"]
+
+[ext_resource type="Script" uid="uid://btgv2c0apq3bx" path="res://node_2d.gd" id="1_rnjyy"]
+[ext_resource type="Texture2D" uid="uid://c6l8av8a80jv2" path="res://assets/b5e744563e38673500f826e1863cb661.jpg" id="2_4vge2"]
+[ext_resource type="Script" uid="uid://cdh6j1fkrjbbc" path="res://button.gd" id="3_04qyp"]
+
+[node name="Node2D" type="Node2D" unique_id=1523531599]
+script = ExtResource("1_rnjyy")
+
+[node name="background" type="TextureRect" parent="." unique_id=1708305478]
+offset_right = 1150.0
+offset_bottom = 650.0
+texture = ExtResource("2_4vge2")
+
+[node name="Button" type="Button" parent="." unique_id=59495681]
+offset_left = 212.0
+offset_top = 229.0
+offset_right = 265.0
+offset_bottom = 269.0
+text = "Level 1"
+script = ExtResource("3_04qyp")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

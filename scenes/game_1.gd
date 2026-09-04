@@ -5,5 +5,6 @@ func _ready() -> void:
 	
 func on_event_coin_collected(value: int) -> void:
 	if GameController.total_coins > 3:
-		get_tree().change_scene_to_file("res://scenes/titlescreen.tscn")
-	
+		GameController.total_coins = 0
+		get_tree().change_scene_to_file("res://scenes/game_2.tscn")
+		
