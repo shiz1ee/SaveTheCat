@@ -22,7 +22,7 @@ func on_event_coin_collected(value: int) -> void:
 	if GameController.total_coins >= 6:
 			GameController.total_coins = 0
 			GameController.unlock_next_level(2)
-			get_tree().change_scene_to_file("res://scenes/titlescreen.tscn")
+			get_tree().call_deferred("change_scene_to_file", "res://scenes/youwon.tscn")
 
 func on_event_lives_changed(current_lives: int) -> void:
 	update_hearts_ui(current_lives)

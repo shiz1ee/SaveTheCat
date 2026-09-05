@@ -218,6 +218,3 @@ expand_mode = 1
 
 [node name="Node2D" parent="." unique_id=1566445603 instance=ExtResource("7_8rbwk")]
 position = Vector2(392, 79)
-
-[node name="Node2D2" parent="." unique_id=1456600630 instance=ExtResource("7_8rbwk")]
-position = Vector2(151, 79)

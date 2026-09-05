@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/node_2d.tscn")
+	Leveltransition.change_scene_to("res://scenes/node_2d.tscn")
 
 
 func _on_quit_pressed() -> void:
@@ -25,4 +25,4 @@ func _on_texture_button_pressed() -> void:
 
 
 func _on_setting_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/settingsmenu.tscn")

@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://icfr08gkjlh1"]
+
+[ext_resource type="Script" uid="uid://smuieik5l2ms" path="res://scenes/settingsmenu.gd" id="1_4mgbd"]
+[ext_resource type="FontFile" uid="uid://5a20jerkx6hd" path="res://fonts/PixelOperator8.ttf" id="2_rkurf"]
+
+[node name="Settingsmenu" type="Control" unique_id=886627892]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4mgbd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1170777373]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.5
+offset_top = -55.75
+offset_right = 120.5
+offset_bottom = 55.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 7
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1264342585]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer" unique_id=222369226]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer" unique_id=1146110283]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_rkurf")
+text = "Mute"
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=980462960]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_rkurf")
+theme_override_font_sizes/font_size = 32
+text = "Back"

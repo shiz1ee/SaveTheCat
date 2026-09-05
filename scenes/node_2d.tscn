@@ -3,28 +3,56 @@
 [ext_resource type="Script" uid="uid://btgv2c0apq3bx" path="res://node_2d.gd" id="1_rnjyy"]
 [ext_resource type="Texture2D" uid="uid://c6l8av8a80jv2" path="res://assets/b5e744563e38673500f826e1863cb661.jpg" id="2_4vge2"]
 [ext_resource type="Script" uid="uid://cdh6j1fkrjbbc" path="res://button.gd" id="3_04qyp"]
+[ext_resource type="FontFile" uid="uid://5a20jerkx6hd" path="res://fonts/PixelOperator8.ttf" id="3_4vge2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_32yeg"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5ph2"]
+bg_color = Color(1, 1, 1, 1)
 
 [node name="Node2D" type="Node2D" unique_id=1523531599]
 script = ExtResource("1_rnjyy")
 
 [node name="background" type="TextureRect" parent="." unique_id=1708305478]
+modulate = Color(0.12574849, 0.121469654, 0.43465897, 0.9882353)
 offset_right = 1150.0
 offset_bottom = 650.0
 texture = ExtResource("2_4vge2")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2110898653]
-offset_right = 257.0
-offset_bottom = 81.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 409.0
+offset_top = 283.0
+offset_right = 666.0
+offset_bottom = 364.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 11
 
 [node name="level1button" type="Button" parent="HBoxContainer" unique_id=59495681]
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-text = "Level 1"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4vge2")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_32yeg")
+text = " level 1 "
 script = ExtResource("3_04qyp")
 
 [node name="level2button" type="Button" parent="HBoxContainer" unique_id=332883886]
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-text = "Level 2"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4vge2")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_g5ph2")
+text = " level 2 "
 
-[connection signal="pressed" from="HBoxContainer/level1button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/level1button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/level1button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/level2button" to="." method="_on_level_2_button_pressed"]

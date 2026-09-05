@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dp0xpc21rjkf7"]
+
+[ext_resource type="Script" uid="uid://t2n826anwcpj" path="res://scenes/leveltransition.gd" id="1_ddsm4"]
+
+[node name="leveltransition" type="CanvasLayer" unique_id=1700973962]
+process_mode = 3
+script = ExtResource("1_ddsm4")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1578346269]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.003921569, 0.003921569, 0.003921569, 0)

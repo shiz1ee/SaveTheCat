@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Global="*uid://cmucol5v28rti"
 EventController="*uid://50lpm5en0k1e"
 GameController="*uid://gpqwh4qpoi2k"
+Leveltransition="*uid://dp0xpc21rjkf7"
 
 [display]
 
