@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://x53rhiejfiad" path="res://assets/sheet.png" id="2_7gu72"]
 [ext_resource type="PackedScene" uid="uid://lfwymm3g4x8f" path="res://scenes/coin.tscn" id="3_7gu72"]
 [ext_resource type="PackedScene" uid="uid://cw801sae2w6f8" path="res://scenes/killzone.tscn" id="4_neyee"]
+[ext_resource type="Texture2D" uid="uid://celfurtha0rjp" path="res://assets/heart pixel art 16x16.png" id="6_ygnno"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_neyee"]
 texture = ExtResource("2_7gu72")
@@ -135,6 +136,9 @@ texture = ExtResource("2_7gu72")
 3:7/0 = 0
 4:7/0 = 0
 5:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_cw3hl"]
 physics_layer_0/collision_layer = 1
@@ -151,6 +155,7 @@ position = Vector2(74, 63)
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=177603076]
 position = Vector2(-3, -11)
 zoom = Vector2(4, 4)
+limit_bottom = 150
 position_smoothing_enabled = true
 
 [node name="TileMap" type="TileMap" parent="." unique_id=962974974]
@@ -175,3 +180,37 @@ position = Vector2(106, 135)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=2039853346]
 shape = SubResource("WorldBoundaryShape2D_cw3hl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=505144773]
+
+[node name="Coinlabel" type="Label" parent="CanvasLayer" unique_id=904278013]
+offset_left = -1.0
+offset_top = 33.0
+offset_right = 60.0
+offset_bottom = 56.0
+text = "Coins: 0"
+
+[node name="Heartscontainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1867848950]
+offset_right = 104.0
+offset_bottom = 32.0
+
+[node name="Heart1" type="TextureRect" parent="CanvasLayer/Heartscontainer" unique_id=1437137728]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("6_ygnno")
+expand_mode = 1
+
+[node name="Heart2" type="TextureRect" parent="CanvasLayer/Heartscontainer" unique_id=1747610056]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("6_ygnno")
+expand_mode = 1
+
+[node name="Heart3" type="TextureRect" parent="CanvasLayer/Heartscontainer" unique_id=1962662366]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("6_ygnno")
+expand_mode = 1
