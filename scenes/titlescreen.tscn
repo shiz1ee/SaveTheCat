@@ -87,4 +87,5 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_tt55a")
 text = "QUIT"
 
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/setting" to="." method="_on_setting_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]

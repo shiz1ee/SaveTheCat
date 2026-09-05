@@ -15,15 +15,14 @@ func _ready() -> void:
 	
 	EventController.connect("coin_collected", on_event_coin_collected)
 	EventController.connect("lives_changed", on_event_lives_changed)
-	GameController.play_music(preload("res://assets/music/emmntt_-_i_think_id_stay_jungle_chill.wav"))
 	
 func on_event_coin_collected(value: int) -> void:
 	coin_label.text = "Coins: " + str(value)
 	
-	if GameController.total_coins > 3:
+	if GameController.total_coins >= 6:
 			GameController.total_coins = 0
 			GameController.unlock_next_level(2)
-			get_tree().change_scene_to_file("res://scenes/game_2.tscn")
+			get_tree().change_scene_to_file("res://scenes/titlescreen.tscn")
 
 func on_event_lives_changed(current_lives: int) -> void:
 	update_hearts_ui(current_lives)
