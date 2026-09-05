@@ -12,12 +12,19 @@ offset_right = 1150.0
 offset_bottom = 650.0
 texture = ExtResource("2_4vge2")
 
-[node name="Button" type="Button" parent="." unique_id=59495681]
-offset_left = 212.0
-offset_top = 229.0
-offset_right = 265.0
-offset_bottom = 269.0
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2110898653]
+offset_right = 257.0
+offset_bottom = 81.0
+
+[node name="level1button" type="Button" parent="HBoxContainer" unique_id=59495681]
+layout_mode = 2
 text = "Level 1"
 script = ExtResource("3_04qyp")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="level2button" type="Button" parent="HBoxContainer" unique_id=332883886]
+layout_mode = 2
+text = "Level 2"
+
+[connection signal="pressed" from="HBoxContainer/level1button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/level1button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/level2button" to="." method="_on_level_2_button_pressed"]

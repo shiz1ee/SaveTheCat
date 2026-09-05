@@ -10,3 +10,8 @@ var lives: int = 3
 func love_life() -> void:
 	lives -= 1
 	EventController.emit_signal("lives_changed", lives)
+	
+var ulocked_level: int = 1
+func unlock_next_level(level_number: int) -> void:
+	if level_number > ulocked_level:
+		ulocked_level = level_number

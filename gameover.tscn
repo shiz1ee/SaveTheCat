@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://hgai42u3n8ms"]
+
+[ext_resource type="Script" uid="uid://w5xvmth4tbnl" path="res://gameover.gd" id="1_2nw6q"]
+[ext_resource type="FontFile" uid="uid://bxxdy01fv8pxb" path="res://fonts/PixelOperator8-Bold.ttf" id="1_eeur3"]
+[ext_resource type="FontFile" uid="uid://5a20jerkx6hd" path="res://fonts/PixelOperator8.ttf" id="2_kctv7"]
+[ext_resource type="Texture2D" uid="uid://c6l8av8a80jv2" path="res://assets/b5e744563e38673500f826e1863cb661.jpg" id="3_2nw6q"]
+[ext_resource type="Script" uid="uid://cdh6j1fkrjbbc" path="res://button.gd" id="4_w3x71"]
+
+[node name="Gameover" type="Control" unique_id=2061590595]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 575.0
+offset_top = 326.0
+offset_right = 615.0
+offset_bottom = 366.0
+script = ExtResource("1_2nw6q")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1261242333]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1365969305]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -276.0
+offset_top = -75.5
+offset_right = 276.0
+offset_bottom = 75.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=1646918536]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_eeur3")
+theme_override_font_sizes/font_size = 64
+text = "Game Over"
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=312674032]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kctv7")
+theme_override_font_sizes/font_size = 64
+text = "Retry"
+script = ExtResource("4_w3x71")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=495203177]
+modulate = Color(1, 0.56078434, 1, 0.39607844)
+position = Vector2(0.9999924, -3.8146973e-06)
+scale = Vector2(1.5673468, 1.5748793)
+texture = ExtResource("3_2nw6q")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1021631524]
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -14,4 +14,4 @@ func _on_timer_timeout() -> void:
 		get_tree().reload_current_scene()
 	else:
 		GameController.lives = 3
-		get_tree().change_scene_to_file("res://scenes/titlescreen.tscn")
+		get_tree().change_scene_to_file("res://gameover.tscn")
