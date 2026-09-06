@@ -24,6 +24,11 @@ Gameplay Screenshot
 - **Interactive Enemies:** Patrolling slime with dynamic raycasts detecting collisions and attacks.
 - **Audio Controls:** Custom settings menu featuring a mute button and sound volume.
 
+### 🎮 Supported Platforms
+* **Windows** (Executable `.exe`)
+* **Android** (Direct `.apk` install with on-screen touch controls)
+* **Web** (Playable directly in browser via itch.io)
+
 ---
 
 ## Controls
