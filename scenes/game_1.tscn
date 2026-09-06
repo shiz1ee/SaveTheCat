@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cw801sae2w6f8" path="res://scenes/killzone.tscn" id="4_neyee"]
 [ext_resource type="Texture2D" uid="uid://celfurtha0rjp" path="res://assets/heart pixel art 16x16.png" id="6_ygnno"]
 [ext_resource type="PackedScene" uid="uid://1b43ofjph4y" path="res://scenes/Slime.tscn" id="7_8rbwk"]
+[ext_resource type="PackedScene" uid="uid://drwexjyfvgm20" path="res://scenes/touchcontrols.tscn" id="8_lyscb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_neyee"]
 texture = ExtResource("2_7gu72")
@@ -218,3 +219,11 @@ expand_mode = 1
 
 [node name="Node2D" parent="." unique_id=1566445603 instance=ExtResource("7_8rbwk")]
 position = Vector2(392, 79)
+
+[node name="Control" type="Control" parent="." unique_id=658408815]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="touchcontrols" parent="Control" unique_id=2023139955 instance=ExtResource("8_lyscb")]

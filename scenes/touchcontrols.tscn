@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://drwexjyfvgm20"]
+
+[ext_resource type="Texture2D" uid="uid://clfy65bp7ap56" path="res://assets/Square_premade_buttons_16x16px.png" id="1_3m6bf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n5fy"]
+atlas = ExtResource("1_3m6bf")
+region = Rect2(65.01859, 0.9648056, 14.000603, 14.013331)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy4le"]
+atlas = ExtResource("1_3m6bf")
+region = Rect2(81.0368, 2.0263844, 14.0034485, 12.996504)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvg0h"]
+atlas = ExtResource("1_3m6bf")
+region = Rect2(128.93672, 0.9888659, 14.120834, 14.070399)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oeyiv"]
+atlas = ExtResource("1_3m6bf")
+region = Rect2(144.97993, 2.9947295, 14.006577, 13.016228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rkwl"]
+atlas = ExtResource("1_3m6bf")
+region = Rect2(161.08052, 1.1061211, 13.908325, 13.923671)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cky1"]
+atlas = ExtResource("1_3m6bf")
+region = Rect2(177.04858, 2.0754657, 13.986694, 12.93671)
+
+[node name="touchcontrols" type="CanvasLayer" unique_id=2023139955]
+
+[node name="Btnleft" type="TouchScreenButton" parent="." unique_id=1742792210]
+position = Vector2(283, 500)
+scale = Vector2(5, 5)
+texture_normal = SubResource("AtlasTexture_7n5fy")
+texture_pressed = SubResource("AtlasTexture_oy4le")
+action = "move_right"
+
+[node name="Btnright" type="TouchScreenButton" parent="." unique_id=600575416]
+position = Vector2(53, 500)
+scale = Vector2(5, 5)
+texture_normal = SubResource("AtlasTexture_gvg0h")
+texture_pressed = SubResource("AtlasTexture_oeyiv")
+action = "move_left"
+
+[node name="Btnjump" type="TouchScreenButton" parent="." unique_id=305486980]
+position = Vector2(850, 500)
+scale = Vector2(5, 5)
+texture_normal = SubResource("AtlasTexture_4rkwl")
+texture_pressed = SubResource("AtlasTexture_4cky1")
+action = "jump"
