@@ -41,6 +41,15 @@ Gameplay Screenshot
 
 ---
 
+## How to run it locally 
+1. Download Godot (https://godotengine.org/download/windows/)
+2. Clone the repo:
+```
+git clone  https://github.com/shiz1ee/SaveTheCat.git
+```
+3. Open Godot -> Project manager -> Import -> select the project.godot file in the repo folder
+4. Press F5 or the play button to run.
+
 ## Tech Stack & Architecture
 
 - **Engine:** Godot Engine 4 (GDScript)
